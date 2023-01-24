@@ -39,14 +39,10 @@ namespace Testselect
                 Phone = Convert.ToInt32(TextBox4.Text),
                 Email = TextBox3.Text,
                 Photo = "Images/" + FileUpload1.FileName,
-
-           
-        
             };
             db.Customers.Add(customer);
             db.SaveChanges();
             FileUpload1.SaveAs(System.IO.Path.Combine(Server.MapPath("Images"), FileUpload1.FileName));
-      
             Response.Redirect("Admin.aspx");
 
         }
